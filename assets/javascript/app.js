@@ -2,7 +2,7 @@
 
 //APP STATE
 
-//var that represents the total score 
+
 
 var totalCorrect = 0;
 
@@ -13,7 +13,7 @@ $("#mainDiv").hide();
 $("#endDiv").hide();
 
 
-var time = 30;
+var time = 46;
 
 
 
@@ -53,19 +53,6 @@ var time = 30;
 */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //EVENT MANAGEMENT 
 
 //click start and it starts the game
@@ -83,9 +70,11 @@ $("#startButton").click(function(){
 	$("#mainDiv").show();
 
 
-	$("#watch").html(time);
+	
 
-	setInterval(decrement, 1000);
+
+	run();
+	//setInterval(decrement, 1000);
 
 
 	//setTimeout(ThirtySeconds, 1000 * 30);
@@ -93,16 +82,24 @@ $("#startButton").click(function(){
 	});
 
 
+	function run(){
 
 
+		var intervalId = setInterval(decrement, 1000);
 
-$(".submit").click(function(){
+		
+	}
+
+
+$(".submitButton").click(function(){
 
 	
 
 	$("#mainDiv").hide();
 
 	$("#endDiv").show();
+
+	clearInterval(intervalId);
 
 
 	});
@@ -114,9 +111,9 @@ $(".submit").click(function(){
 
 
 
-$(".submit").on("click", function (){
+$(".submitButton").on("click", function (){
 
-		console.log("in the submit function");
+		
 		
 		is_checked();
 		displayScore();
@@ -138,10 +135,26 @@ function decrement(){
 
 	time--;
 
+	
+	$("#show-number").html("<h2>" + time + "<h2>");
+
+     if(time === 0){
+
+	is_checked();
+	displayScore();
+
+	$("#mainDiv").hide();
+
+	$("#endDiv").show();
+
+	clearInterval(intervalId);
+
+	}
+
+
 }
 
 
- $("#watch").html(time);
 
 
 
@@ -188,13 +201,13 @@ function is_checked  (){
 				
 			if(wharton_checked){
 
-				console.log("wharton is checked");
+				
 
 				totalCorrect++;
 			}
 
 			else{
-				console.log("wharton is not checked");
+				
 				totalWrong++;
 			}
 
@@ -205,13 +218,13 @@ function is_checked  (){
 				
 			if(amazement_checked){
 
-				console.log("amazement is checked");
+				
 
 				totalCorrect++;
 			}
 
 			else{
-				console.log("amazement is not checked");
+				
 				totalWrong++;
 			}
 
@@ -262,7 +275,7 @@ function is_checked  (){
 			}
 
 			else{
-				console.log("cap is not checked");
+				
 				totalWrong++;
 			}
 
@@ -283,8 +296,8 @@ function is_checked  (){
 
 function displayScore  (){
 
-$("#correct").html(totalCorrect);
-$("#incorrect").html(totalWrong);
+$("#correct").html("<h3>" + totalCorrect + "</h3>");
+$("#incorrect").html("<h3>" + totalWrong + "</h3>");
 
 	}
 

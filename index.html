@@ -15,14 +15,22 @@
 
 </head>
 
+<div class = "container">
+
 
 <body>
 
 <div id = "startDiv">
 
-<p>Press the button to start the Literary Trivia Game</p>
+
+<img class= "image" src="assets/images/image.png" width="300" height ="300">
+
+
+<h1 class = "text">Literary Triva Game</h1>
+
 
 <button type="button" id= "startButton" >Start Game</button>
+
 
 
 
@@ -44,16 +52,21 @@
 
 <div id = "mainDiv">
 
-<h1>Literary Triva Game</h1>
+
+
+<h1 class = "text">Literary Triva Game</h1>
 
 <div id = "time">
 	
-<span><strong>You have thirty seconds:</strong><span><span id = watch></span>
+<span class = "text"><strong>You have forty-five seconds:</strong><span>
+
+<div id="show-number"></div>
+
 
 </div> 
 
 
-<form id="trivia-game" action="submission.html" method="get" onsubmit = "return is_checked()">
+<form class = "text" id="trivia-game" action="submission.html" method="get" onsubmit = "return is_checked()">
 
 <p>Which author wrote <em>The House of Mirth</em>?</p>
 
@@ -130,7 +143,7 @@
 <input type="radio" name="pill"  value="pill" id="pill"/>
 <label for ="pill">pill</label><br>
 
-
+<!--
 <p>Gustave Flaubert famously said: "I am ...?</p>
 
 <input type="radio" name="flaubert"  value="master" id="master"/>
@@ -144,9 +157,10 @@
 
 <input type="radio" name=""  value="louis" id="louis"/>
 <label for ="louis">Sir Balzac</label><br>
+-->
+<br>
 
-
-<img class= "submit" src="assets/images/submit.png" width="125" height ="100">
+<button type="button" class= "submitButton" >Submit</button>
 
 
 
@@ -160,12 +174,12 @@
 
 <div id = endDiv>
 
-<h1>Your Score:</h1>
+<h1 class = "text">Your Score:</h1>
 
 
-<span>Number Correct:</span><span id="correct"></span>
-<br
-<span> Incorrect:</span><span id ="incorrect"></span>
+<span class = "text"><h3>Number Correct:</h3></span><span id="correct"></span>
+<br>
+<span class = "text"><h3>Number Incorrect:</h3></span><span id ="incorrect"></span>
 
 
 
@@ -177,6 +191,9 @@
 <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 
+<!--End of container-->
+
+</div>
 
 </body>
 
