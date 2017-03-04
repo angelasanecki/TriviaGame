@@ -18,13 +18,34 @@
 
 <body>
 
-<h1>Triva Game</h1>
+<div id = "startDiv">
+
+<button type="button" id= "startButton" >Start Game</button>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id = "mainDiv">
+
+<h1>Literary Triva Game</h1>
 
 
 <form id="trivia-game" action="submission.html" method="get" onsubmit = "return is_checked()">
 
-<p>Which author wrote <em>House of Mirth</em>?</p>
-<br />
+<p>Which author wrote <em>The House of Mirth</em>?</p>
+
 
 <input type="radio" name="mirth"  value="lawrence" id="lawrence"/>
 <label for ="lawrence">D.H. Lawrence</label><br>
@@ -38,30 +59,107 @@
 <input type="radio" name="mirth"  value="forster" id="forster"/>
 <label for ="forster">E.M. Forster</label><br>
 
+<p>Amy Tan's novel set in early 20th century Shanghai is entitled <em>The Valley of ...</em>?</p>
+
+<input type="radio" name="tan"  value="happiness" id="happiness"/>
+<label for ="happiness">Atonement</label><br>
+
+<input type="radio" name="tan"  value="amazement" id="amazement"/>
+<label for ="amazement">Amazement</label><br>
+
+<input type="radio" name="tan"  value="dolls" id="dolls"/>
+<label for ="dolls">Dolls</label><br>
+
+<input type="radio" name="tan"  value="Shadows" id="Shadows"/>
+<label for ="shadows">Shadows</label><br>
+
+<p> It's rumored that after his death, Thomas Hardy's heart was eaten by a ...?</p>
+
+<input type="radio" name="hardy"  value="cat" id="cat"/>
+<label for ="cat">cat</label><br>
+
+<input type="radio" name="hardy"  value="dog" id="dog"/>
+<label for ="dog">dog</label><br>
+
+<input type="radio" name="hardy"  value="pig" id="pig"/>
+<label for ="pig">pig</label><br>
+
+<input type="radio" name="hardy"  value="crow" id="crow"/>
+<label for ="crow">crow</label><br>
 
 
 
+<p>Which author wrote the 1929 novel entitled <em>Passing
+</em>? </p>
+
+<input type="radio" name="passing"  value="fitzgerald" id="fitzgerald"/>
+<label for ="fitzgerald">F. Scott Fitzgerald</label><br>
+
+<input type="radio" name="passing"  value="hemingway" id="hemingway"/>
+<label for ="hemingway">Ernest Hemingway</label><br>
+
+<input type="radio" name="passing"  value="woolf" id="woolf"/>
+<label for ="woolf">Virginia Woolf</label><br>
+
+<input type="radio" name="passing"  value="larsen" id="larsen"/>
+<label for ="larsen">Nella Larsen</label><br>
 
 
+<p>It's rumored that playwright Tennessee Williams died by choking on a...?</p>
+
+<input type="radio" name="williams"  value="tooth" id="tooth"/>
+<label for ="tooth">tooth</label><br>
+
+<input type="radio" name="williams"  value="bottle-cap" id="bottle-cap"/>
+<label for ="bottle-cap">bottle cap</label><br>
+
+<input type="radio" name="williams"  value="cherry-pit" id="cherry-pit"/>
+<label for ="cherry-pit">cherry pit</label><br>
+
+<input type="radio" name="pill"  value="pill" id="pill"/>
+<label for ="pill">pill</label><br>
+
+
+<p>Gustave Flaubert famously said: "I am ...?</p>
+
+<input type="radio" name="flaubert"  value="master" id="master"/>
+<label for ="master">the Master</label><br>
+
+<input type="radio" name="flaubert"  value="bovary" id="bovary"/>
+<label for ="bovary">Madame Bovary</label><br>
+
+<input type="radio" name="flaubert"  value="alpha" id="alpha"/>
+<label for ="alpha">the Alpha</label><br>
+
+<input type="radio" name=""  value="louis" id="louis"/>
+<label for ="louis">Sir Balzac</label><br>
 
 
 <img class= "submit" src="assets/images/submit.png" width="125" height ="100">
 
 
 
-</form>
+</form> 
+
+<!--maindiv end -->
+
+</div>
+
+
+
+<div id = endDiv>
 
 
 
 
-
-
-
+</div>
 
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+
 
 </body>
 
