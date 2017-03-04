@@ -1,4 +1,4 @@
-  $(document).ready(function() {
+ $(document).ready(function() {
 
 //APP STATE
 
@@ -7,55 +7,6 @@
 var totalCorrect = 0;
 
 var totalWrong = 0;
-
-$("#mainDiv").hide();
-
-$("#endDiv").hide();
-
-
-var time = 30;
-
-
-
-
-
-//stopwatch object
-
-
-/* var stopwatch = {
-	time: 0,
-
-	start: function(){
-
-		console.log("stopwatch has started");
-
-		counter = setInterval(stopwatch.count, 1000);
-
-	},
-
-
-
-	count: function() {
-
-		stopwatch.time++;
-
-		console.log(stopwatch.time);
-
-		//var converted = stopwatch.timeConverter(stopwatch.time);
-
-		//$("#display").html(stopwatch.time);
-	}
-
-	
-//stopwatch object end 	
-}
-
-*/
-
-
-
-
-
 
 
 
@@ -68,47 +19,6 @@ var time = 30;
 
 //EVENT MANAGEMENT 
 
-//click start and it starts the game
-
-//counter starts to count down when you click "start" Counter is set to 30 seconds 
-
-
-
-$("#startButton").click(function(){
-
-	
-
-	$("#startDiv").hide();
-
-	$("#mainDiv").show();
-
-
-	$("#watch").html(time);
-
-	setInterval(decrement, 1000);
-
-
-	//setTimeout(ThirtySeconds, 1000 * 30);
-
-	});
-
-
-
-
-
-$(".submit").click(function(){
-
-	
-
-	$("#mainDiv").hide();
-
-	$("#endDiv").show();
-
-
-	});
-
-
-
 
 
 
@@ -119,7 +29,6 @@ $(".submit").on("click", function (){
 		console.log("in the submit function");
 		
 		is_checked();
-		displayScore();
 });
 
 
@@ -127,24 +36,12 @@ $(".submit").on("click", function (){
 
 //APP LOGIC 
 
+//click start and it starts the game
 
 
 
-	
 
-
-
-function decrement(){
-
-	time--;
-
-}
-
-
- $("#watch").html(time);
-
-
-
+//counter starts to count down when you click "start" Counter is set to 30 seconds 
 
 
 
@@ -162,21 +59,6 @@ function decrement(){
 
 
 //look for a listener that gathers whether a radio button is selected 
-
-
-/*function ThirtySeconds () {
-
- 			alert("You're out of time");
-
- 			$("#mainDiv").hide();
- 			$("#endDiv").show();
- 			is_checked();
- 			displayScore();
-
-
-		}
-*/
-
 
 
 
@@ -270,6 +152,29 @@ function is_checked  (){
 	}
 			
 
+	var bovary_checked = document.getElementById("flaubert").checked;
+		
+				
+			if(bovary_checked){
+
+				console.log("bovary is checked");
+
+				totalCorrect++;
+			}
+
+			else{
+				console.log("bovary is not checked");
+				totalWrong++;
+			}
+
+			console.log("wins is :" + totalCorrect);
+
+			console.log("losses is :" + totalWrong);
+				
+
+	}
+
+
  
 
 //JQuery Methods show and hide to show and hide an element  $(containername).hide();
@@ -280,14 +185,6 @@ function is_checked  (){
 
 
 //APP DISPLAY 
-
-function displayScore  (){
-
-$("#correct").html(totalCorrect);
-$("#incorrect").html(totalWrong);
-
-	}
-
 
 
 //When the timer hits zero, it tells you that you are done and the number of questions you got correct, the number of questions you got incorrect and the number of questions that you have unanswered 
@@ -302,13 +199,14 @@ $("#incorrect").html(totalWrong);
 
 
 
-
-
-//end of document ready function
+console.log("I am in the console log");
+    
 
 });
 
 
+
+//end of document ready function
 
 
 
