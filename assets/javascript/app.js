@@ -15,7 +15,7 @@ $("#endDiv").hide();
 
 var time = 46;
 
-
+var intervalId;
 
 
 
@@ -85,7 +85,7 @@ $("#startButton").click(function(){
 	function run(){
 
 
-		var intervalId = setInterval(decrement, 1000);
+		intervalId = setInterval(decrement, 1000);
 
 		
 	}
@@ -279,7 +279,30 @@ function is_checked  (){
 				totalWrong++;
 			}
 
-			
+
+
+	var bovary_checked = document.getElementById("bovary").checked;
+		
+				
+			if(bovary_checked){
+
+				
+				totalCorrect++;
+			}
+
+			else{
+				
+				totalWrong++;
+			}
+
+
+
+
+
+
+
+
+//end of is_checked function 			
 	}
 			
 
